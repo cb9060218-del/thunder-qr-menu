@@ -5,31 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thunder Café Menu</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #fffaf3; color: #222; padding: 20px; }
-    h1 { color: #d4af37; text-align: center; margin-bottom: 10px; }
-    .menu { max-width: 500px; margin: 0 auto; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); padding: 20px; }
-    .category { font-size: 1.2em; font-weight: bold; color: #000; border-bottom: 2px solid #d4af37; margin-top: 20px; }
-    .item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
-    .item:last-child { border: none; }
+    body { font-family: 'Poppins', sans-serif; margin: 0; background: #fffaf3; color: #222; padding: 20px; }
+    h1 { color: #d4af37; text-align: center; margin-bottom: 20px; }
+    .menu { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .item { background: white; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.2s ease; }
+    .item:hover { transform: scale(1.02); }
+    .item img { width: 100%; height: 180px; object-fit: cover; }
+    .info { padding: 15px; text-align: center; }
+    .info h3 { margin: 5px 0; color: #000; }
+    .info p { color: #555; font-size: 0.9em; margin-bottom: 10px; }
+    .info span { color: #d4af37; font-weight: bold; font-size: 1.1em; }
     footer { text-align: center; margin-top: 30px; color: #777; font-size: 0.9em; }
   </style>
 </head>
 <body>
-  <h1>Thunder Café Menu</h1>
+  <h1>Thunder Café Menu ☕</h1>
   <div class="menu">
-    <div class="category">☕ Beverages</div>
-    <div class="item"><span>Thunder Latte</span><span>₹149</span></div>
-    <div class="item"><span>Cold Brew</span><span>₹129</span></div>
-    <div class="item"><span>Mojito</span><span>₹99</span></div>
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" alt="Thunder Latte">
+      <div class="info">
+        <h3>Thunder Latte</h3>
+        <p>Signature espresso with caramel foam.</p>
+        <span>₹149</span>
+      </div>
+    </div>
 
-    <div class="category">🍔 Snacks</div>
-    <div class="item"><span>Veg Club Sandwich</span><span>₹179</span></div>
-    <div class="item"><span>French Fries</span><span>₹89</span></div>
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=800" alt="Cold Brew">
+      <div class="info">
+        <h3>Cold Brew</h3>
+        <p>Iced black coffee, strong and smooth.</p>
+        <span>₹129</span>
+      </div>
+    </div>
 
-    <div class="category">🍰 Desserts</div>
-    <div class="item"><span>Brownie Blast</span><span>₹199</span></div>
-    <div class="item"><span>Ice Cream Scoop</span><span>₹79</span></div>
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1608756900019-7d7cdb3a8e1f?w=800" alt="Mojito">
+      <div class="info">
+        <h3>Mojito</h3>
+        <p>Refreshing mint, lime and soda.</p>
+        <span>₹99</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1605475128023-3b39fce1c3b7?w=800" alt="Veg Club Sandwich">
+      <div class="info">
+        <h3>Veg Club Sandwich</h3>
+        <p>Fresh veggies, cheese and sauces.</p>
+        <span>₹179</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1605475127100-9e3b5a6a9cb4?w=800" alt="French Fries">
+      <div class="info">
+        <h3>French Fries</h3>
+        <p>Crispy golden fries with spice mix.</p>
+        <span>₹89</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1605475128065-b92a74097ef7?w=800" alt="Brownie Blast">
+      <div class="info">
+        <h3>Brownie Blast</h3>
+        <p>Warm brownie with ice cream scoop.</p>
+        <span>₹199</span>
+      </div>
+    </div>
   </div>
-  <footer>Powered by Thunder ⚡</footer>
+  <footer>Powered by <strong>Thunder ⚡</strong></footer>
 </body>
 </html>
